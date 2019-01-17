@@ -1,0 +1,11 @@
+[Unit]
+Description=Fix issues after an abrupt power cycle
+Before=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/share/subutai/etc/fix-power-cycle.sh
+
+[Install]
+WantedBy=multi-user.target
+
